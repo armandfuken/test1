@@ -11,6 +11,7 @@
   </head>
   <body>
     <div>cabecera
+          <a href="{{ route('Index') }}" class="btn btn-primary">inicio</a>
         <a href="{{ route('galeria') }}" class="btn btn-primary">Fotos</a>
         <a href="{{ route('blogs') }}" class="btn btn-secondary"/>Blog</a>
         <a href="{{ route('nosotros')}}" class="btn btn-primary"/> nosotros </a>

@@ -11,13 +11,23 @@
 |
 */
 
-Route::get('/', 'PagesController@Index');
+Route::get('/', 'PagesController@Index')->name('Index');
+
+Route::get('/detalle/{id}', 'PagesController@detalle')->name('notas.detalle');
+
+Route::get('/editar/{id}', 'PagesController@editar')->name('notas.editar');
+
+Route::put('/update/{id}', 'PagesController@update')->name('notas.update');
+
+Route::delete('/delete/{id}', 'PagesController@delete')->name('notas.eliminar');
+
+Route::post('/', 'PagesController@crear')->name('notas.crear');
 
 Route::get('blog', 'PagesController@blog')->name('blogs');
+
 Route::get('galeria','PagesController@galeria')->name('galeria');    //NOMBRES PARA QUE LOS IDENTIFIQUE EN LA PLANTILLA {{route(name)}}
 
 Route::get('nosotros/{nombre?}','PagesController@nosotros')->name('nosotros');
-
 
 Route::get('cami/{casa}', function ($par) {
     return "O".$par;
