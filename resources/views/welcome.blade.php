@@ -3,6 +3,10 @@
     <div class="container my-4">
         <h1 class="display-4">Notas</h1>
      </div>
+     @component('alert')
+       <p> well something went wrong </p>
+    @endcomponent
+
 
      @if (session('message'))
        <div class="alert alert-success">
@@ -15,7 +19,6 @@
            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden ="true">&times;</span>
            </button></div>
-
        @enderror
 
        @error ('descripcion')
@@ -29,7 +32,8 @@
      value="{{old('descripcion')}}">
      <button class="btn btn-primary" type="submit"> ADD</button>
    </form>
-     <table class="table">
+
+      <table class="table">
        <thead>
          <tr>
            <th scope="col">id</th>
